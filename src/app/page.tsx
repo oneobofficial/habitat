@@ -961,10 +961,10 @@ export default function Home() {
                     style={{ width: '900px', height: '420px', background: 'radial-gradient(ellipse at top, rgba(200,169,106,0.07) 0%, transparent 70%)', opacity: 0.5 }} />
 
                 {/* ── Inner shell: tight flex column, no wasted space */}
-                <div className="relative z-10 flex flex-col h-full w-full max-w-[1600px] mx-auto section-padding pt-8 md:pt-10 pb-0">
+                <div className="relative z-10 flex flex-col justify-end gap-6 h-full w-full max-w-[1600px] mx-auto section-padding pt-8 md:pt-10 pb-0">
 
                     {/* ─── 3-Column Link Grid ───────────────────────────── */}
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-8 mb-5 md:mb-8">
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
 
                         {/* Explore */}
                         <div>
@@ -1035,10 +1035,8 @@ export default function Home() {
                         </div>
                     </div>
 
-                    {/* ─── Massive HABITAT wordmark ─────────────────────── */}
-                    {/* flex-1 anchors wordmark to fill remaining height; items-end */}
-                    {/* keeps it flush against the footer bottom edge               */}
-                    <div className="flex-1 flex items-end pointer-events-none overflow-hidden">
+                    {/* ─── Massive HABITAT wordmark — no flex-1, sits directly below legal ── */}
+                    <div className="pointer-events-none overflow-hidden">
                         <h2
                             id="footer-habitat-text"
                             className="select-none w-full text-center"
